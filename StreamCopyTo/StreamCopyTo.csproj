@@ -11,7 +11,8 @@
     <PackageLicenseUrl>https://github.com/TheInsaneBro/Reporting-Stream.CopyTo/blob/master/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/TheInsaneBro/Reporting-Stream.CopyTo</PackageProjectUrl>
     <RepositoryUrl>https://github.com/TheInsaneBro/Reporting-Stream.CopyTo</RepositoryUrl>
-    <PackageTags>async asynchronous stream copyto reporting task progress iprogress</PackageTags>
+    <PackageTags>async asynchronous stream copyto reporting task progress iprogress system io</PackageTags>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
 </Project>
