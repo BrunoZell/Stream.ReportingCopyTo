@@ -5,6 +5,18 @@ namespace System.IO
 {
     public static class StreamExtensions
     {
+        /// <summary>
+        /// Asynchronously reads the bytes from the current stream and writes them to another
+        /// stream, using a specified buffer size and cancellation token.
+        /// </summary>
+        /// <param name="destination">The stream to which the contents of the current stream
+        /// will be copied.</param>
+        /// <param name="bufferSize">The size, in bytes, of the buffer. This value must be
+        /// greater than zero. The default size is 81920.</param>
+        /// <param name="progress">The progress reporter. Reports the current total amount if
+        /// copied bytes.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.
+        /// The default value is System.Threading.CancellationToken.None.</param>
         public static async Task CopyToAsync(this Stream source, Stream destination, int bufferSize, IProgress<long> progress, CancellationToken cancellationToken = default(CancellationToken))
         {
             if (source == null) {
@@ -41,6 +53,18 @@ namespace System.IO
             }
         }
 
+        /// <summary>
+        /// Asynchronously reads the bytes from the current stream and writes them to another
+        /// stream, using a specified buffer size and cancellation token.
+        /// </summary>
+        /// <param name="destination">The stream to which the contents of the current stream
+        /// will be copied.</param>
+        /// <param name="bufferSize">The size, in bytes, of the buffer. This value must be greater
+        /// than zero. The default size is 81920.</param>
+        /// <param name="progress">The progress reporter. Reports the current relative progress
+        /// in percent. For that the source stream has to support the <see cref="Stream.Length"/> property.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests. The
+        /// default value is System.Threading.CancellationToken.None.</param>
         public static Task CopyToAsync(this Stream source, Stream destination, int bufferSize, IProgress<float> progress, CancellationToken cancellationToken = default(CancellationToken))
         {
             if (source == null) {
