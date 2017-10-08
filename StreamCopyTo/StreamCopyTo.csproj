@@ -6,13 +6,14 @@
     <Authors>Bruno Zell</Authors>
     <Company />
     <Product />
-    <Description>Provides a Stream.CopyTo overload for reporting the current progress while copying.</Description>
+    <Description>Provides Stream.CopyTo overloads for reporting the current relative or absolute progress while copying.</Description>
     <Copyright>Bruno Zell</Copyright>
     <PackageLicenseUrl>https://github.com/TheInsaneBro/Reporting-Stream.CopyTo/blob/master/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/TheInsaneBro/Reporting-Stream.CopyTo</PackageProjectUrl>
     <RepositoryUrl>https://github.com/TheInsaneBro/Reporting-Stream.CopyTo</RepositoryUrl>
     <PackageTags>async asynchronous stream copyto reporting task progress iprogress system io</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>1.1.0</Version>
   </PropertyGroup>
 
 </Project>
