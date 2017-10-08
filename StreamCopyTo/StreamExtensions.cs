@@ -1,9 +1,12 @@
 ﻿using System.Threading;
 using System.Threading.Tasks;
 
-namespace System.IO {
-    public static class StreamExtensions {
-        public static async Task CopyToAsync(this Stream source, Stream destination, int bufferSize, IProgress<long> progress, CancellationToken cancellationToken = default(CancellationToken)) {
+namespace System.IO
+{
+    public static class StreamExtensions
+    {
+        public static async Task CopyToAsync(this Stream source, Stream destination, int bufferSize, IProgress<long> progress, CancellationToken cancellationToken = default(CancellationToken))
+        {
             if (source == null) {
                 throw new ArgumentNullException(nameof(source));
             }
@@ -36,6 +39,27 @@ namespace System.IO {
                 totalBytesRead += bytesRead;
                 progress.Report(totalBytesRead);
             }
+        }
+
+        public static Task CopyToAsync(this Stream source, Stream destination, int bufferSize, IProgress<float> progress, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            if (source == null) {
+                throw new ArgumentNullException(nameof(source));
+            }
+            
+            long totalLength;
+            try {
+                totalLength = source.Length;
+            }
+            catch (NotSupportedException ex) {
+                throw new ArgumentException($"Length of {nameof(source)}is needed for relative progress.", nameof(source), ex);
+            }
+
+            var absoluteProgress = new Progress<long>(totalBytesCopied => {
+                progress.Report((float)totalBytesCopied / totalLength);
+            });
+
+            return source.CopyToAsync(destination, bufferSize, absoluteProgress, cancellationToken);
         }
     }
 }
