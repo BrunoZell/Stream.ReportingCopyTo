@@ -1,9 +1,12 @@
 ﻿using System.Threading;
 using System.Threading.Tasks;
 
-namespace System.IO {
-    public static class StreamExtensions {
-        public static async Task CopyToAsync(this Stream source, Stream destination, int bufferSize, IProgress<long> progress, CancellationToken cancellationToken = default(CancellationToken)) {
+namespace System.IO
+{
+    public static class StreamExtensions
+    {
+        public static async Task CopyToAsync(this Stream source, Stream destination, int bufferSize, IProgress<long> progress, CancellationToken cancellationToken = default)
+        {
             if (source == null) {
                 throw new ArgumentNullException(nameof(source));
             }

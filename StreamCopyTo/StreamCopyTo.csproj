@@ -1,18 +1,17 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFrameworks>net45;netcoreapp1.0;netstandard1.0</TargetFrameworks>
-    <PackageId>StreamCopyToReporting</PackageId>
-    <Authors>Bruno Zell</Authors>
-    <Company />
-    <Product />
-    <Description>Provides a Stream.CopyTo overload for reporting the current progress while copying.</Description>
-    <Copyright>Bruno Zell</Copyright>
-    <PackageLicenseUrl>https://github.com/TheInsaneBro/Reporting-Stream.CopyTo/blob/master/LICENSE</PackageLicenseUrl>
-    <PackageProjectUrl>https://github.com/TheInsaneBro/Reporting-Stream.CopyTo</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/TheInsaneBro/Reporting-Stream.CopyTo</RepositoryUrl>
-    <PackageTags>async asynchronous stream copyto reporting task progress iprogress system io</PackageTags>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-  </PropertyGroup>
+    <PropertyGroup>
+        <TargetFrameworks>net45;netcoreapp1.0;netstandard1.0</TargetFrameworks>
+        <PackageId>StreamCopyToReporting</PackageId>
+        <Authors>Bruno Zell</Authors>
+        <Description>Provides a Stream.CopyTo overload for reporting the current progress while copying.</Description>
+        <Copyright>Bruno Zell</Copyright>
+        <PackageLicenseUrl>https://github.com/TheInsaneBro/Reporting-Stream.CopyTo/blob/master/LICENSE</PackageLicenseUrl>
+        <PackageProjectUrl>https://github.com/TheInsaneBro/Reporting-Stream.CopyTo</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/TheInsaneBro/Reporting-Stream.CopyTo</RepositoryUrl>
+        <PackageTags>async asynchronous stream copyto reporting task progress iprogress system io</PackageTags>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <LangVersion>latest</LangVersion>
+    </PropertyGroup>
 
 </Project>
