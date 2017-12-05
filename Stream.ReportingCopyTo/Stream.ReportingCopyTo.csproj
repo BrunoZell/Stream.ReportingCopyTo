@@ -4,7 +4,7 @@
         <TargetFrameworks>net45;netcoreapp1.0;netstandard1.0</TargetFrameworks>
         <PackageId>Stream.ReportingCopyTo</PackageId>
         <Authors>Bruno Zell</Authors>
-        <Description>Provides a Stream.CopyTo overload for reporting the current progress while copying.</Description>
+        <Description>Provides Stream.CopyTo overloads for reporting the current relative or absolute progress while copying.</Description>
         <Copyright>Bruno Zell</Copyright>
         <PackageLicenseUrl>https://github.com/TheInsaneBro/Stream.ReportingCopyTo/blob/master/LICENSE</PackageLicenseUrl>
         <PackageProjectUrl>https://github.com/TheInsaneBro/Stream.ReportingCopyTo</PackageProjectUrl>
