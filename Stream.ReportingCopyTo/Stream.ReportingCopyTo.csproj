@@ -13,7 +13,7 @@
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <LangVersion>latest</LangVersion>
         <RootNamespace>System.IO</RootNamespace>
-        <Version>2.0.0</Version>
+        <Version>2.1.0</Version>
         <Product>Stream.ReportingCopyTo</Product>
     </PropertyGroup>
 
