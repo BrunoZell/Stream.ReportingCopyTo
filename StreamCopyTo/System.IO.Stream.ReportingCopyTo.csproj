@@ -12,6 +12,7 @@
         <PackageTags>async asynchronous stream copyto reporting task progress iprogress system io</PackageTags>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <LangVersion>latest</LangVersion>
+        <RootNamespace>System.IO</RootNamespace>
     </PropertyGroup>
 
 </Project>
