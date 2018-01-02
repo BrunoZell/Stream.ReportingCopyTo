@@ -44,7 +44,7 @@ namespace System.IO
             }
 
             var buffer = new byte[bufferSize];
-            int totalBytesRead = 0;
+            long totalBytesRead = 0;
             int bytesRead;
             while ((bytesRead = await source.ReadAsync(buffer, 0, buffer.Length, cancellationToken).ConfigureAwait(false)) != 0) {
                 await destination.WriteAsync(buffer, 0, bytesRead, cancellationToken).ConfigureAwait(false);
